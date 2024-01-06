@@ -38,28 +38,20 @@ poetry install
 ### As a module
 
 ```python
-from example_data_crawler import crawl
-
-print(crawl("lrytas", "df", query="vakcinacija", date_from="2023-01-01", time_limit=10))
-```
-
-For more examples look in the [examples](./examples) directory.
 
 ## Structure
 
 The project is structured as follows:
 
-- `example_data_crawler/`: Main package directory.
+- `Crawler/`: Main package directory.
   - `__init__.py`: Package initialization file.
   - `crawlers/`: Directory containing individual crawler scripts.
     - `__init__.py`: Initialization file for crawlers module.
     - `lrytas.py`: Crawler for the Lrytas website.
-    - `mersedes_crawler.py`: Crawler for the Mercedes website.
-  - `definitions.py`: Definitions and utility functions.
+    - `definitions.py`: Definitions and utility functions.
   - `dl_image.py`: Script for downloading images.
   - `main.py`: Main script for the crawler package.
 - `examples/`: Directory containing example scripts.
-  - `lrytas/`: Examples for the Lrytas crawlers.
     - `all.py`: Example script for crawling all data.
     - `by_topic.py`: Example script for crawling by topic.
 - `tests/`: Test scripts for the package.
